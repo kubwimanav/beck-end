@@ -5,11 +5,11 @@ import DashHome from './DashHome'
 
 function Layout() {
   return (
-    <div className=' flex flex-row'>
+    <div className=' flex flex-row bg-white'>
           <Sidebar />
-          <div>
+          <div className=' w-full ml-[171px]'>
               <Navbar />
-              <DashHome/>
+              <DashHome />
           </div>
     </div>
   )
