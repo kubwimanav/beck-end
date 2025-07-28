@@ -164,8 +164,25 @@ function DashHome() {
   ];
 
   return (
-    <div className=" flex flex-col gap-10 px-10 py-6">
-      <div className=" flex flex-row gap-10 items-center justify-center">
+    <div className=" flex flex-col gap-10 px-6 py-6 sm:px-10 md:px-10 lg:px-10">
+      <div className=" flex flex-row gap-4  bg-blue-600 px-3 py-7 rounded-2xl">
+        <div className=" h-10 w-10 bg-blue-500 flex items-center justify-center rounded-md">
+          <PiCubeLight className=" text-2xl text-white" />
+        </div>
+        <div className=" flex flex-col gap-4">
+          <h1 className=" font-bold text-xl text-white">
+            iHUZA INVENTORY - System Overview
+          </h1>
+          <p className=" text-[14px] text-white">
+            Monitor your iHUZA inventory and product assignments in real-time.
+          </p>
+          <div className=" flex flex-row items-center gap-2">
+            <IoMdCheckmarkCircleOutline className=" text-teal-700 text-xl" />
+            <p className=" text-[12px] text-white">All Systems Operational</p>
+          </div>
+        </div>
+      </div>
+      <div className=" flex flex-col gap-5 items-center justify-center md:grid md:grid-cols-2 lg:flex lg:flex-row">
         {cardicon.map((item) => (
           <Cards
             title={item.title}
@@ -182,7 +199,7 @@ function DashHome() {
         }`}
       >
         <p className=" font-bold text-xl pb-4">Recent Added Products</p>
-        <div className=" grid grid-cols-3 gap-3 items-center">
+        <div className=" grid gap-3 items-center md:grid-cols-2 lg:grid-cols-3">
           {cardtext.map((item) => (
             <CardText
               title={item.title}
@@ -194,17 +211,25 @@ function DashHome() {
           ))}
         </div>
       </div>
-      <div className={` flex flex-col gap-4 shadow-sm rounded-md px-6 py-4 ${theme == "light" ? "" : "border-1 border-gray-600"}`}>
+      <div
+        className={` flex flex-col gap-4 shadow-sm rounded-md px-0 py-4 ${
+          theme == "light" ? "" : "border-1 border-gray-600"
+        }`}
+      >
         <div className=" flex flex-row justify-between">
           <p>User</p>{" "}
           <button className=" bg-blue-500 text-white px-3 py-1 rounded-xl">
             Add User
           </button>
         </div>
-        <div>
+        <div className=' overflow-auto'>
           <table className=" w-full text-left border-collapse">
             <thead>
-              <tr className="  bg-gray-50 text-sm  text-[#DEE2EE]">
+              <tr
+                className={`text-sm  text-[#DEE2EE] ${
+                  theme === "light" ? " bg-gray-50 " : "bg-gray-700"
+                } `}
+              >
                 <th className="  py-2 font-normal">User</th>
                 <th className="  py-2 font-normal">Role</th>
                 <th className=" py-2 font-normal">Status</th>
@@ -216,7 +241,7 @@ function DashHome() {
               {tabledate.map((item) => (
                 <tr key={item.email} className=" border-b border-gray-200">
                   <td className=" flex flex-row gap-2 items-center  py-2">
-                    <div className=" bg-[#DEE2EE] p-2 rounded-full">
+                    <div className=" bg-[#DEE2EE] p-1 rounded-full sm:p-2">
                       <GoPerson />
                     </div>
                     <div className=" flex flex-col">
@@ -243,7 +268,7 @@ function DashHome() {
                     </p>
                   </td>
                   <td className=" py-2 text-[11px]">{item.time}</td>
-                  <td className=" py-2 flex flex-row gap-5">
+                  <td className=" py-2 flex flex-row gap-2 sm:gap-5 ">
                     <button className="  text-blue-300 py-1 font-bold text-[11px]">
                       Edit
                     </button>

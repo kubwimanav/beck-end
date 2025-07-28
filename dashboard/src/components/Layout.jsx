@@ -14,7 +14,7 @@ function Layout() {
       }`}
     >
       <Sidebar />
-      <div className=" w-full ml-[171px] ">
+      <div className=" ml-0 sm:ml-[0px] md:ml-[234.6px] lg:w-full   ">
         <Navbar />
         <DashHome />
       </div>
