@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdAlignVerticalTop } from "react-icons/md";
+import { MdAlignVerticalTop, MdWarningAmber } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { MdAssessment } from "react-icons/md";
 import { PiCubeLight } from "react-icons/pi";
@@ -8,12 +8,18 @@ import { GoPerson } from "react-icons/go";
 import Cards from './cards';
 import CardText from './CardText';
 import { useTheme } from '../hooks/theme';
+import {  useUser } from '../hooks/Useuser';
 
 
 
 
 function DashHome() {
   const { theme } = useTheme();
+  const { user } = useUser() || {};
+
+   
+  const user1=user
+
 
   const tabledate = [
     {
@@ -114,7 +120,7 @@ function DashHome() {
       description: "Assigned Products",
     },
     {
-      icon: <MdAlignVerticalTop className=' bg-amber-100 text-amber-300 text-2xl  h-10 w-10 p-2 rounded-md'/>,
+      icon: <MdWarningAmber className=' bg-amber-100 text-amber-300 text-2xl  h-10 w-10 p-2 rounded-md'/>,
       title: "90",
       description: "Unassigned Products",
     },
@@ -222,7 +228,7 @@ function DashHome() {
             Add User
           </button>
         </div>
-        <div className=' overflow-auto'>
+        <div className=" overflow-auto">
           <table className=" w-full text-left border-collapse">
             <thead>
               <tr
@@ -241,7 +247,7 @@ function DashHome() {
               {tabledate.map((item) => (
                 <tr key={item.email} className=" border-b border-gray-200">
                   <td className=" flex flex-row gap-2 items-center  py-2">
-                    <div className=" bg-[#DEE2EE] p-1 rounded-full sm:p-2">
+                    <div className=" bg-[#DEE2EE] p-1 rounded-full sm:p-3">
                       <GoPerson />
                     </div>
                     <div className=" flex flex-col">
@@ -281,7 +287,17 @@ function DashHome() {
             </tbody>
           </table>
         </div>
+        {user ? (
+          <div>
+            <h1>{user.name}</h1>
+            <h2>{user.role}</h2>
+            <h3>{user.company}</h3>
+          </div>
+        ) : (
+          <div className="text-red-500">User not found</div>
+        )}
       </div>
+      
     </div>
   );
 }

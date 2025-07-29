@@ -34,11 +34,16 @@ function Navbar() {
           onClick={() => {
             setOpen(!open);
           }}
-          className=' text-2xl'
+          className=" text-2xl"
         />
       </div>
       <div className=" hidden sm:flex items-center gap-8">
-        <MdDarkMode onClick={toggleTheme} />
+        {/* <MdDarkMode onClick={toggleTheme} /> */}
+        {theme === "light" ? (
+          <MdDarkMode onClick={toggleTheme} />
+        ) : (
+          <LuSettings onClick={toggleTheme} />
+        )}
         <LuSettings />
         <MdNotificationsNone />
         <p>Admin@ihuza.com</p>
