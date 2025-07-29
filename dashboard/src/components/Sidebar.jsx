@@ -37,7 +37,7 @@ function Sidebar() {
     ];
   return (
     <div
-      className={` h-screen hidden w-fit px-9 pt-7 shadow-xl sm:flex sm:flex-col  md:flex md:flex-col gap-6 fixed  ${
+      className={` h-screen hidden w-fit px-9 pt-7 shadow-xl sm:flex sm:px-3 sm:flex-col  md:flex md:flex-col lg:px-5 gap-6 fixed  ${
         theme === "light"
           ? "bg-white "
           : "bg-[#1e293b] text-white border-gray-700 border-1 "
@@ -55,7 +55,7 @@ function Sidebar() {
       {sidebarItems.map((item) => (
         <div className=" flex flex-row gap-4 items-center ">
           <div className=" text-[#DEE2EE]">{item.icon}</div>
-          <div className={`flex flex-row w-[130px] justify-between  items-center  font-bold text-xs  ${theme==="light"?"text-gray-800":"text-white"}`}>{item.name} <p className=' font-normal text-[10px]'>{ item.size}</p></div>
+          <div className={`flex flex-row w-[130px] justify-between  items-center  font-bold text-xs  sm:w-[100px] lg:w-[130px] ${theme==="light"?"text-gray-800":"text-white"}`}>{item.name} <p className=' font-normal text-[10px]'>{ item.size}</p></div>
         </div>
       ))}
     </div>

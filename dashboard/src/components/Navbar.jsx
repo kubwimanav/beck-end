@@ -11,21 +11,31 @@ import Modal from './Modal';
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  
+     const handlemadal = () => {
+       setOpen(!open);
+     };
   return (
     <div
-      className={`flex  flex-row items-center justify-between   py-3 px-9 sm:px-9 shadow-md sm:w-[20rem] md:w-[48.6rem] lg:w-[64.4rem] ${
+      className={`flex  flex-row items-center justify-between   py-3 px-9 sm:px-9 shadow-md ${
         theme === "light"
           ? "bg-white"
           : "bg-[#1e293b] text-white border-1 border-gray-700"
       }`}
     >
+      {open && <Modal handlemadal={handlemadal} />}
       <div>
         <h2 className=" font-bold">Dashboard</h2>
         <p>Welcome Back, Admin</p>
       </div>
       <div className="flex flex-row gap-3 sm:hidden">
         <MdDarkMode onClick={toggleTheme} />
-        <MdMenu />
+        <MdMenu
+          onClick={() => {
+            setOpen(!open);
+          }}
+          className=' text-2xl'
+        />
       </div>
       <div className=" hidden sm:flex items-center gap-8">
         <MdDarkMode onClick={toggleTheme} />
@@ -36,11 +46,6 @@ function Navbar() {
           <GoPerson />
         </div>
       </div>
-      <Modal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        
-      />
     </div>
   );
 }

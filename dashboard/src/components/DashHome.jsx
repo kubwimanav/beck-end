@@ -177,7 +177,7 @@ function DashHome() {
             Monitor your iHUZA inventory and product assignments in real-time.
           </p>
           <div className=" flex flex-row items-center gap-2">
-            <IoMdCheckmarkCircleOutline className=" text-teal-700 text-xl" />
+            <IoMdCheckmarkCircleOutline className=" text-green-400 text-xl" />
             <p className=" text-[12px] text-white">All Systems Operational</p>
           </div>
         </div>
@@ -212,7 +212,7 @@ function DashHome() {
         </div>
       </div>
       <div
-        className={` flex flex-col gap-4 shadow-sm rounded-md px-0 py-4 ${
+        className={` flex flex-col gap-4 shadow-sm rounded-md px-4 sm:px-9 py-4 ${
           theme == "light" ? "" : "border-1 border-gray-600"
         }`}
       >
@@ -226,8 +226,8 @@ function DashHome() {
           <table className=" w-full text-left border-collapse">
             <thead>
               <tr
-                className={`text-sm  text-[#DEE2EE] ${
-                  theme === "light" ? " bg-gray-50 " : "bg-gray-700"
+                className={`text-sm  text-[#c0c7db] ${
+                  theme === "light" ? " bg-gray-100 " : "bg-gray-700"
                 } `}
               >
                 <th className="  py-2 font-normal">User</th>
