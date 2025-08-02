@@ -9,16 +9,16 @@ import Cards from './cards';
 import CardText from './CardText';
 import { useTheme } from '../hooks/theme';
 import {  useUser } from '../hooks/Useuser';
+import User from './User';
 
 
 
 
 function DashHome() {
   const { theme } = useTheme();
-  const { user } = useUser() || {};
+  const { users } = useUser();
 
    
-  const user1=user
 
 
   const tabledate = [
@@ -218,7 +218,7 @@ function DashHome() {
         </div>
       </div>
       <div
-        className={` flex flex-col gap-4 shadow-sm rounded-md px-4 sm:px-9 py-4 ${
+        className={` flex flex-col gap-4 shadow-sm rounded-md py-4 ${
           theme == "light" ? "" : "border-1 border-gray-600"
         }`}
       >
@@ -229,14 +229,14 @@ function DashHome() {
           </button>
         </div>
         <div className=" overflow-auto">
-          <table className=" w-full text-left border-collapse">
-            <thead>
+          <table className=" w-full text-left border-collapse ">
+            <thead className='px-9'>
               <tr
                 className={`text-sm  text-[#c0c7db] ${
                   theme === "light" ? " bg-gray-100 " : "bg-gray-700"
                 } `}
               >
-                <th className="  py-2 font-normal">User</th>
+                <th className="  py-2 px-7 font-normal">User</th>
                 <th className="  py-2 font-normal">Role</th>
                 <th className=" py-2 font-normal">Status</th>
                 <th className="  py-2 font-normal">Last Login</th>
@@ -246,7 +246,7 @@ function DashHome() {
             <tbody className=" text-sm">
               {tabledate.map((item) => (
                 <tr key={item.email} className=" border-b border-gray-200">
-                  <td className=" flex flex-row gap-2 items-center  py-2">
+                  <td className=" flex flex-row gap-2 items-center  py-2 px-4">
                     <div className=" bg-[#DEE2EE] p-1 rounded-full sm:p-3">
                       <GoPerson />
                     </div>
@@ -287,15 +287,6 @@ function DashHome() {
             </tbody>
           </table>
         </div>
-        {user ? (
-          <div>
-            <h1>{user.name}</h1>
-            <h2>{user.role}</h2>
-            <h3>{user.company}</h3>
-          </div>
-        ) : (
-          <div className="text-red-500">User not found</div>
-        )}
       </div>
       
     </div>

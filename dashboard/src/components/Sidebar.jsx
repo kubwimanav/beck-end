@@ -9,7 +9,7 @@ import { SiBookstack } from "react-icons/si";
 import { LuLogOut } from 'react-icons/lu';
 
 function Sidebar() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme} = useTheme();
     const sidebarItems = [
       {
         name: " Dashboard",
@@ -65,7 +65,7 @@ function Sidebar() {
           </div>
         </div>
       ))}
-      <div className=" flex gap-5 mt-60 ">
+      <div className=" flex gap-5 mt-50 ">
         <LuLogOut className="text-[#DEE2EE]" />
         <p
           className={`font-bold text-xs ${

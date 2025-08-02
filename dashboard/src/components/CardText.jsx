@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTheme } from '../hooks/theme'
 
 export default function CardText({ title, date, description, button,className }) {

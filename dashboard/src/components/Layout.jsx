@@ -3,9 +3,10 @@ import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import DashHome from './DashHome'
 import { useTheme } from '../hooks/theme';
+import { Outlet } from 'react-router-dom';
 
 function Layout() {
-    const { theme, toggleTheme } = useTheme();
+    const { theme} = useTheme();
   
   return (
     <div
@@ -16,7 +17,7 @@ function Layout() {
       <Sidebar />
       <div className="w-full ml-0 sm:ml-[130px] md:ml-[150.6px] lg:ml-[185px] lg:w-full  mx-auto   ">
         <Navbar />
-        <DashHome />
+        <Outlet/>
       </div>
     </div>
   );

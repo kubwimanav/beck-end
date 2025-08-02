@@ -1,5 +1,5 @@
 import './App.css'
-import Layout from './components/Layout'
+import AppRoute from './AppRoute';
 import { ThemeProvider } from './context/ThemeContext'
 import { UserProvider } from './context/UserContext'
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <UserProvider>
       <ThemeProvider>
-        <Layout />
+        <AppRoute />
       </ThemeProvider>
     </UserProvider>
   );
