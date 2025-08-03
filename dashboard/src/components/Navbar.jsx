@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { MdDarkMode } from "react-icons/md";
 import { LuSettings } from "react-icons/lu";
 import { MdNotificationsNone } from "react-icons/md";
-import { GoPerson } from "react-icons/go";
+import {GoPerson } from "react-icons/go";
 import { useTheme } from '../hooks/theme';
 import { MdMenu } from "react-icons/md";
 import Modal from './Modal';
+import { IoSunnyOutline } from "react-icons/io5";
 
 
 function Navbar() {
@@ -41,7 +42,7 @@ function Navbar() {
         {theme === "light" ? (
           <MdDarkMode onClick={toggleTheme} />
         ) : (
-          <LuSettings onClick={toggleTheme} />
+          <IoSunnyOutline onClick={toggleTheme} />
         )}
         <LuSettings />
         <MdNotificationsNone />

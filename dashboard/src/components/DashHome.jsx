@@ -10,12 +10,14 @@ import CardText from './CardText';
 import { useTheme } from '../hooks/theme';
 import {  useUser } from '../hooks/Useuser';
 import User from './User';
+import { useProducts } from '../hooks/useProducts';
 
 
 
 
 function DashHome() {
   const { theme } = useTheme();
+  const { products } = useProducts();
   const { users } = useUser();
 
    
@@ -106,12 +108,12 @@ function DashHome() {
   const cardicon = [
     {
       icon: <GoPeople className=' bg-blue-100 text-blue-500 text-2xl  h-10 w-10 p-2 rounded-md' />,
-      title: "116",
+      title:` ${users.length}`,
       description: "Total Users",
     },
     {
       icon: <PiCubeLight className=' text-blue-500 bg-blue-100 text-2xl  h-10 w-10 p-2 rounded-md'/>,
-      title: "100",
+      title: ` ${products.length}`,
       description: "Total Products",
     },
     {
@@ -170,7 +172,7 @@ function DashHome() {
   ];
 
   return (
-    <div className=" flex flex-col gap-10 px-6 py-6 sm:px-10 md:px-10 lg:px-10">
+    <div className=" flex flex-col gap-10">
       <div className=" flex flex-row gap-4  bg-blue-600 px-3 py-7 rounded-2xl">
         <div className=" h-10 w-10 bg-blue-500 flex items-center justify-center rounded-md">
           <PiCubeLight className=" text-2xl text-white" />
@@ -228,6 +230,7 @@ function DashHome() {
             Add User
           </button>
         </div>
+        
         <div className=" overflow-auto">
           <table className=" w-full text-left border-collapse ">
             <thead className='px-9'>

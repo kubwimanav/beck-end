@@ -15,9 +15,11 @@ function Layout() {
       }`}
     >
       <Sidebar />
-      <div className="w-full ml-0 sm:ml-[130px] md:ml-[150.6px] lg:ml-[185px] lg:w-full  mx-auto   ">
+      <div className="w-full  ml-0 sm:ml-[130px] md:ml-[150.6px] lg:ml-[185px] lg:w-full  mx-auto   ">
         <Navbar />
-        <Outlet/>
+        <div className='px-9 py-6 '> 
+          <Outlet />
+        </div>
       </div>
     </div>
   );
