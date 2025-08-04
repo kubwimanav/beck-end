@@ -3,6 +3,7 @@ const users = [
   { 
     name: "John Smith",
     email: "john.smith@ihuza.com",
+    password: "123456",
     role: "Admin",
     status: "Active",
     time: "2 hours ago",
@@ -10,6 +11,7 @@ const users = [
   {
     name: "Sarah Johnson",
     email: "sarah.j@ihuza.com",
+    password: "123456",
     role: "Manager",
     status: "Active",
     time: "2 hours ago",
@@ -17,6 +19,7 @@ const users = [
   {
     name: "Michael Brown",
     email: "m.brown@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "Active",
     time: "1 day ago",
@@ -24,6 +27,7 @@ const users = [
   {
     name: "Emily Davis",
     email: "emily.d@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "InActive",
     time: "3 days ago",
@@ -31,6 +35,7 @@ const users = [
   {
     name: "David Wilson",
     email: "d.wilson@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "Active",
     time: "6 hours ago",
@@ -38,6 +43,7 @@ const users = [
   {
     name: "Lisa Anderson",
     email: "lisa.a@ihuza.com",
+    password: "123456",
     role: "Manager",
     status: "Active",
     time: "30 min ago",
@@ -45,6 +51,7 @@ const users = [
   {
     name: "Robert Taylor",
     email: "r.taylor@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "Active",
     time: "2 days ago",
@@ -52,6 +59,7 @@ const users = [
   {
     name: "Jennifer Miller",
     email: "j.miller@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "Active",
     time: "4 hours ago",
@@ -59,6 +67,7 @@ const users = [
   {
     name: "Christopher Lee",
     email: "c.lee@ihuza.com",
+    password: "123456",
     role: "Admin",
     status: "Active",
     time: "1 hour ago",
@@ -66,6 +75,7 @@ const users = [
   {
     name: "Amanda White",
     email: "a.white@ihuza.com",
+    password: "123456",
     role: "Staff",
     status: "InActive",
     time: "1 week ago",

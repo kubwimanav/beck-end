@@ -69,7 +69,7 @@ function Sidebar() {
         </div>
       </div>
       {sidebarItems.map((item) => (
-        <div className={`flex flex-row gap-4 items-center ${item.butt}`}>
+        <div className={`flex flex-row  gap-4 items-center ${item.butt}`}>
           <div className=" text-[#DEE2EE]">{item.icon}</div>
           <Link to={`${item.path}`}
             className={`flex flex-row w-[130px] justify-between  items-center  font-bold text-xs  sm:w-[100px] lg:w-[130px] ${
