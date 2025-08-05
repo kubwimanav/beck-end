@@ -11,6 +11,10 @@ import { IoSunnyOutline } from "react-icons/io5";
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
+
+ const local = JSON.parse(localStorage.getItem("currentUser"))
+  
+
   const [open, setOpen] = useState(false);
   
      const handlemadal = () => {
@@ -46,7 +50,7 @@ function Navbar() {
         )}
         <LuSettings />
         <MdNotificationsNone />
-        <p>Admin@ihuza.com</p>
+        <p>{ local?.email}</p>
         <div className=" bg-blue-600 text-white text-xm rounded-full p-1">
           <GoPerson />
         </div>
