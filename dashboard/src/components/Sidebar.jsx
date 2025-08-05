@@ -64,7 +64,7 @@ const handlelogout = () => {
   
   return (
     <div
-      className={` h-screen hidden w-fit px-12 pt-7 shadow-xl sm:flex sm:px-3 sm:flex-col  md:flex md:flex-col lg:px-3 gap-6 fixed  ${
+      className={` h-screen hidden w-fit px-12 pt-5 shadow-xl sm:flex sm:px-3 sm:flex-col  md:flex md:flex-col lg:px-3 gap-6 fixed  ${
         theme === "light"
           ? "bg-white "
           : "bg-[#1e293b] text-white border-gray-700 border-1 "
@@ -81,7 +81,7 @@ const handlelogout = () => {
       </div>
       {sidebarItems.map((item) => (
         <div className={`flex flex-row  gap-2 items-center hover:bg-blue-200 py-2 px-2 rounded-md ${item.butt}`}>
-          <div className=" text-[#DEE2EE]">{item.icon}</div>
+          <div className=" text-[#a6aab3]">{item.icon}</div>
 
           <Link to={`${item.path}`}
             className={`flex flex-row w-[130px] justify-between  items-center  font-bold text-xs  sm:w-[100px] lg:w-[130px] ${
@@ -119,7 +119,7 @@ const handlelogout = () => {
       <div className=" flex gap-5 mt-50 " onClick={handlelogout}>
         <LuLogOut className="text-red-500" />
         <Link
-          className={`font-bold text-xs ${
+          className={`font-bold text-xs hover:text-red-500 ${
             theme === "light" ? "text-gray-800" : "text-white"
           }`}
         >

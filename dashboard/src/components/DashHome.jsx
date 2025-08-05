@@ -23,78 +23,7 @@ function DashHome() {
    
 
 
-  const tabledate = [
-    {
-      name: "John Smith",
-      email: "john.smith@ihuza.com",
-      role: "Admin",
-      status: "Active",
-      time: "2 hours ago",
-    },
-    {
-      name: "Sarah Johnson",
-      email: "sarah.j@ihuza.com",
-      role: "Manager",
-      status: "Active",
-      time: "2 hours ago",
-    },
-    {
-      name: "Michael Brown",
-      email: "m.brown@ihuza.com",
-      role: "Staff",
-      status: "Active",
-      time: "1 day ago",
-    },
-    {
-      name: "Emily Davis",
-      email: "emily.d@ihuza.com",
-      role: "Staff",
-      status: "InActive",
-      time: "3 days ago",
-    },
-    {
-      name: "David Wilson",
-      email: "d.wilson@ihuza.com",
-      role: "Staff",
-      status: "Active",
-      time: "6 hours ago",
-    },
-    {
-      name: "Lisa Anderson",
-      email: "lisa.a@ihuza.com",
-      role: "Manager",
-      status: "Active",
-      time: "30 min ago",
-    },
-    {
-      name: "Robert Taylor",
-      email: "r.taylor@ihuza.com",
-      role: "Staff",
-      status: "Active",
-      time: "2 days ago",
-    },
-    {
-      name: "Jennifer Miller",
-      email: "j.miller@ihuza.com",
-      role: "Staff",
-      status: "Active",
-      time: "4 hours ago",
-    },
-    {
-      name: "Christopher Lee",
-      email: "c.lee@ihuza.com",
-      role: "Admin",
-      status: "Active",
-      time: "1 hour ago",
-    },
-    {
-      name: "Amanda White",
-      email: "a.white@ihuza.com",
-      role: "Staff",
-      status: "InActive",
-      time: "1 week ago",
-    },
-  ];
+  const tabledate = users;
     const roleColors = {
       Admin: " bg-purple-100 text-purple-600",
       Manager: "bg-blue-100 text-blue-800",
@@ -128,48 +57,7 @@ function DashHome() {
     },
   ];
 
-  const cardtext = [
-    {
-      title: "MacBook Pro 16",
-      date: "Dec 10, 2024 ",
-      describtion: "Laptops",
-      button: "In Stock",
-      buttonClass:
-        "bg-green-100 h-fit px-2 py-[2px] text-[10px] rounded-2xl text-green-500",
-    },
-    {
-      title: "Dell XPS 13",
-      date: "Dec 9, 2024",
-      describtion: "Laptops",
-      button: "In Stock",
-      buttonClass:
-        "bg-green-100 h-fit px-2 py-[2px] text-[10px] rounded-2xl text-green-500",
-    },
-    {
-      title: "iPhone 15 Pro ",
-      date: "Dec 8, 2024",
-      describtion: "Mobile",
-      button: "Low Stock",
-      buttonClass:
-        "bg-amber-100 text-amber-900 h-fit px-2 py-[2px] text-[10px] rounded-2xl",
-    },
-    {
-      title: "iPad Air ",
-      date: "Dec 7, 2024",
-      describtion: "Tablets",
-      button: "In Stock ",
-      buttonClass:
-        "bg-green-100 h-fit px-2 py-[2px] text-[10px] rounded-2xl text-green-500",
-    },
-    {
-      title: "Surface Pro 9",
-      date: "Dec 6, 2024",
-      describtion: "Tablets",
-      button: "Out of Stock",
-      buttonClass:
-        "bg-red-200 text-red-900 h-fit px-2 py-[2px] text-[10px] rounded-2xl text-green-500",
-    },
-  ];
+  const useproducts =products.slice(0, 5)
 
   return (
     <div className=" flex flex-col gap-10">
@@ -208,7 +96,7 @@ function DashHome() {
       >
         <p className=" font-bold text-xl pb-4">Recent Added Products</p>
         <div className=" grid gap-3 items-center md:grid-cols-2 lg:grid-cols-3">
-          {cardtext.map((item) => (
+          {useproducts.map((item) => (
             <CardText
               title={item.title}
               date={item.date}
